@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: aquamarine;
+        }
+        .main{
+            width: 300px;
+            height: 180px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 2px;
+            box-shadow: 1px 2px 3px black;
+
+        }
+        form{
+            margin: 50px;
+        }
+        .txt{
+            width: 150px;
+            height: 30px;
+            border: 1px solid black;
+            outline: none;
+            margin-left: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+        .btn{
+            margin: 0 0 0 60px;
+            padding: 10px;
+            color: white;
+            background-color: red;
+            cursor: pointer;
+        }
+        .btn:hover{
+            color: black;
+            background-color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    </style>
+    <title>_Random_number_</title>
+</head>
+<body>
+    <div class="main">
+
+            <form action="">
+                   <p class="txt" id="text" > </p> <br>
+                   <input type="button" value="Random" class="btn" onclick="hima()">
+               </form>
+</div>
+<script>
+      let text=document.getElementById("text");
+      let btn=document.getElementById("btn");
+      function hima(){
+        let random=Math.random();
+        let otp=Math.ceil(random*90+10);
+        text.innerText=otp;
+        console.log(random);
+      }
+</script>
+</body>
+</html>
